@@ -20,6 +20,11 @@ module "example_api_gateway" {
   lambda_invoke_arn    = module.example_lambda.lambda_function_arn
   lambda_function_name = module.example_lambda.lambda_function_name
 }
+
+module "example_vpc" {
+  source = "./vpc"
+
+}
 output "ec2_outputs" {
   value = module.example_ec2
 }
