@@ -23,7 +23,14 @@ module "example_api_gateway" {
 
 module "example_vpc" {
   source = "./vpc"
+}
 
+module "example_medialive" {
+  source = "./medialive"
+}
+
+module "example_mediapackage" {
+  source = "./mediapackage"
 }
 output "ec2_outputs" {
   value = module.example_ec2
@@ -35,4 +42,12 @@ output "lambda_outputs" {
 
 output "api_gateway_outputs" {
   value = module.example_api_gateway
+}
+
+output "medialive_outputs" {
+  value = module.example_medialive
+}
+
+output "mediapackage_outputs" {
+  value = module.example_mediapackage
 }
